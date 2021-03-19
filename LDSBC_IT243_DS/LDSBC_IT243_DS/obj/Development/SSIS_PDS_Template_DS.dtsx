@@ -143,7 +143,7 @@
       DTS:CreationName=""
       DTS:DTSID="{543E22F9-D16B-48B3-9FE9-865AD6DC3FA1}"
       DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
+      DTS:Namespace="User" 
       DTS:ObjectName="v_data_share_root">
       <DTS:VariableValue
         DTS:DataType="8">C:\Users\brunodifreitas\Desktop\GIT Repository\DFNB_src\txt_files\</DTS:VariableValue>
