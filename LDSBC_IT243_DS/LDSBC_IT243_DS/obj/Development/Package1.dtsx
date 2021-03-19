@@ -80,7 +80,7 @@
           DTS:ObjectName="Constraint"
           DTS:To="Package\Sequence Container\Execute SQL Task" />
       </DTS:PrecedenceConstraints>
-    </DTS:Executable>
+    </DTS:Executable> 
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
