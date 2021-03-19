@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="3/18/2020 6:19:47 PM"
+  DTS:CreationDate="3/18/2021 6:19:47 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="A-1079845"
   DTS:CreatorName="LDS\douglassilva"
@@ -108,7 +108,7 @@
       DTS:DTSID="{CAED774E-B8D7-47EE-BF5E-20109CE455C8}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
-      DTS:ObjectName="conn_EXM">
+      DTS:ObjectName="conn_EXM"> 
       <DTS:VariableValue
         DTS:DataType="8">Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
     </DTS:Variable>
