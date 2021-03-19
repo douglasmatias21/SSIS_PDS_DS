@@ -1,0 +1,11 @@
+Public Sub Main()
+    Try
+        Dim sVarValue As String = Dts.Variables("VariableValue").Value.ToString
+        Dts.Variables("strVariableValue").Value = sVarValue
+    Catch ex As Exception
+        Dts.Variables("strVariableValue").Value = "Unable to Convert to String: " _
+            & ex.Message
+    End Try
+
+    Dts.TaskResult = ScriptResults.Success
+End Sub

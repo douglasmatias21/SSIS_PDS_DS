@@ -1,0 +1,2897 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2019 4:40:09 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UT-BW010148-LFP"
+  DTS:CreatorName="ZBC\z035330"
+  DTS:DTSID="{1BB010BB-1842-4696-A06C-C21695272211}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="LoadEXM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{127C8A6F-C88C-4957-9A64-6C3327875763}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DATA.txt]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{355E946B-61C6-4A3A-9CAC-9CE79C4613C1}"
+      DTS:ObjectName="DATA.txt">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">REPLACE(@[User::v_data_share_root], "IT_243\\repos\\DFNB_dw", "IT_240\\repos\\EXM") + "DATA.txt"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_240\repos\EXM\txt_files\DATA.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pl_id"
+              DTS:DTSID="{ECB4B63E-9476-40C6-8A48-62611C430427}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="l_name"
+              DTS:DTSID="{B6ED0AAC-1E4B-4995-8E01-55FBB6C9D261}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="f_name"
+              DTS:DTSID="{5EE7F081-E5E6-4191-A413-A95DE7E57E49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pl_name"
+              DTS:DTSID="{A4C43B88-9237-475F-8D7C-9C47A8725ABB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="t_id"
+              DTS:DTSID="{4E247181-28B9-4645-9469-D07668B728CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_id"
+              DTS:DTSID="{4036EF94-1F72-44E7-A1A3-819D9204D06B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pl_num"
+              DTS:DTSID="{D5FCD427-883B-4D23-A7F8-50E80E552DA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_code"
+              DTS:DTSID="{5DC666CD-44CC-4F1A-9609-FE2A417D1F67}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_name"
+              DTS:DTSID="{29691D98-9CAB-4492-A2D9-2CC539F779AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="p_target"
+              DTS:DTSID="{F54F6A81-B7E5-4905-BA0D-E0F86D5205F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="t_code"
+              DTS:DTSID="{357645EA-4DCB-4BC0-BCBA-8BD15B835886}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EXM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A522647E-853F-4C8E-9A9B-4B1F6334D136}"
+      DTS:ObjectName="EXM">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::conn_EXM]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SSIS_PDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+      DTS:ObjectName="SSIS_PDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=SSIS_PDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="SSIS_PDS_CONFIG_FILE"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{2C6A8CF9-D118-4A92-B0ED-6CFE3E7D1F50}"
+      DTS:ObjectName="XML Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;CommonConfigurations&quot;;"
+      DTS:ConfigurationType="7"
+      DTS:CreationName=""
+      DTS:DTSID="{DA3F5CE9-2A7A-45F2-9F9B-D8ED00084857}"
+      DTS:ObjectName="Common Configurations" />
+    <DTS:Configuration
+      DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;jc&quot;;"
+      DTS:ConfigurationType="7"
+      DTS:CreationName=""
+      DTS:DTSID="{7E265A71-DEE3-40F1-99B8-A94C26E987EC}"
+      DTS:ObjectName="Solution Level Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;LoadEXM&quot;;"
+      DTS:ConfigurationType="7"
+      DTS:CreationName=""
+      DTS:DTSID="{00D4CB22-2D64-414A-95F4-D772268AEEB8}"
+      DTS:ObjectName="Package Level Configuration" />
+    <DTS:Configuration
+      DTS:ConfigurationString="BatchLogID"
+      DTS:ConfigurationVariable="\Package.Variables[User::BatchLogID].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{D2EA1F8F-E4D1-4430-A994-040BBBF05D76}"
+      DTS:ObjectName="BatchLogID" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{541B2C8E-B18F-4E54-B1FD-247146258A2D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BatchLogID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DEA26266-0F12-4B9C-ABD2-B2C0FFB96541}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_DFNB3">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=DFNB3;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A9893958-6389-4C48-A2D9-D84F7B293F97}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="conn_EXM">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=localhost;Initial Catalog=EXM;Provider=SQLNCLI11;Integrated Security=SSPI;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{19052611-9712-48F8-91BF-E689CB175689}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EndBatchAudit">
+      <DTS:VariableValue
+        DTS:DataType="17">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8CA845B8-2E39-4276-9FE1-4EFBA7B73825}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PackageLogID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{38B78AE4-46CC-4708-928E-9AC9CE71C7DA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="strVariableValue">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2998217E-0401-4C14-B142-71815A32698C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="v_data_share_root">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_dw\txt_files\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{73B28D1E-32DC-4D14-867C-5DA604C28D24}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="v_get_date"
+      DTS:RaiseChangedEvent="True">
+      <DTS:VariableValue
+        DTS:DataType="7">2/23/2019 9:55:26 PM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Documentation"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{192A3F51-46AF-4DB5-BD21-C0EBD669F609}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Documentation">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Parent container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{2978EC15-BCD8-4CD9-8C0F-B88430C503B2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Parent container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Parent container\Output raw data"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{28CDD021-D5E1-4EEE-B7E0-217479425B06}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Output raw data"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Parent container\Output raw data\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Flat File Destination">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Parent container\Output raw data\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DATA.txt]"
+                      connectionManagerRefId="Package.ConnectionManagers[DATA.txt]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[pl_id]"
+                          cachedDataType="i4"
+                          cachedName="pl_id"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pl_id]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_id]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[l_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="l_name"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[l_name]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[l_name]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[f_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="f_name"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[f_name]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[f_name]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[pl_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="pl_name"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pl_name]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_name]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[t_id]"
+                          cachedDataType="i4"
+                          cachedName="t_id"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[t_id]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[t_id]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[p_id]"
+                          cachedDataType="i4"
+                          cachedName="p_id"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_id]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_id]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[pl_num]"
+                          cachedDataType="i4"
+                          cachedName="pl_num"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pl_num]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_num]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[p_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="p_code"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_code]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_code]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[p_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="p_name"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_name]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_name]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[p_target]"
+                          cachedDataType="i4"
+                          cachedName="p_target"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_target]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_target]" />
+                        <inputColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].Columns[t_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="5"
+                          cachedName="t_code"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[t_code]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[t_code]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pl_id]"
+                          dataType="i4"
+                          name="pl_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="l_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="f_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="pl_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[t_id]"
+                          dataType="i4"
+                          name="t_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_id]"
+                          dataType="i4"
+                          name="p_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pl_num]"
+                          dataType="i4"
+                          name="pl_num" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="p_code" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="p_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[p_target]"
+                          dataType="i4"
+                          name="p_target" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="t_code" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Parent container\Output raw data\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[tblData]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Parent container\Output raw data\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[EXM]"
+                      connectionManagerRefId="Package.ConnectionManagers[EXM]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pl_id]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_id]"
+                          name="pl_id"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[l_name]"
+                          length="50"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[l_name]"
+                          name="l_name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[f_name]"
+                          length="50"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[f_name]"
+                          name="f_name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pl_name]"
+                          length="100"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_name]"
+                          name="pl_name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[t_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[t_id]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[t_id]"
+                          name="t_id"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_id]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_id]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_id]"
+                          name="p_id"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_num]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pl_num]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[pl_num]"
+                          name="pl_num"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_code]"
+                          length="5"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_code]"
+                          name="p_code"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_name]"
+                          length="50"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_name]"
+                          name="p_name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_target]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_target]"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[p_target]"
+                          name="p_target"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[t_code]"
+                          length="5"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].Columns[t_code]"
+                          name="t_code"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pl_id]"
+                          dataType="i4"
+                          name="pl_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="l_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="f_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="pl_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[t_id]"
+                          dataType="i4"
+                          name="t_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_id]"
+                          dataType="i4"
+                          name="p_id" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pl_num]"
+                          dataType="i4"
+                          name="pl_num" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="p_code" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="p_name" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[p_target]"
+                          dataType="i4"
+                          name="p_target" />
+                        <externalMetadataColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          name="t_code" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pl_id]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pl_id]"
+                          name="pl_id" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[l_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[l_name]"
+                          name="l_name" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[f_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[f_name]"
+                          name="f_name" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pl_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pl_name]"
+                          name="pl_name" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[t_id]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[t_id]"
+                          name="t_id" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_id]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_id]"
+                          name="p_id" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pl_num]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pl_num]"
+                          name="pl_num" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_code]"
+                          name="p_code" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_name]"
+                          name="p_name" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_target]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[p_target]"
+                          name="p_target" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[t_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="5"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[t_code]"
+                          name="t_code" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Parent container\Output raw data.Paths[OLE DB Source Output]"
+                  endId="Package\Parent container\Output raw data\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Parent container\Output raw data\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Parent container\Reload raw data"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Sequence Container"
+          DTS:DTSID="{F23CFE01-B345-4DBB-B451-570098A42326}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Reload raw data">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Parent container\Reload raw data\Load data"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{878CC549-4F09-4E5A-A771-9583B0040394}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load data"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Parent container\Reload raw data\Load data\Flat File Source"
+                      componentClassID="Microsoft.FlatFileSource"
+                      contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Flat File Source"
+                      localeId="1033"
+                      name="Flat File Source"
+                      usesDispositions="true"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Specifies whether zero-length columns are treated as null."
+                          name="RetainNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                          name="FileNameColumnName"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Connections[FlatFileConnection]"
+                          connectionManagerID="Package.ConnectionManagers[DATA.txt]"
+                          connectionManagerRefId="Package.ConnectionManagers[DATA.txt]"
+                          name="FlatFileConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output]"
+                          name="Flat File Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pl_id]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_id]"
+                              name="pl_id"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[l_name]"
+                              length="50"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[l_name]"
+                              name="l_name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[f_name]"
+                              length="50"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[f_name]"
+                              name="f_name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pl_name]"
+                              length="100"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_name]"
+                              name="pl_name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[t_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[t_id]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[t_id]"
+                              name="t_id"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_id]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_id]"
+                              name="p_id"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_num]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pl_num]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_num]"
+                              name="pl_num"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_code]"
+                              length="5"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_code]"
+                              name="p_code"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_name]"
+                              length="50"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_name]"
+                              name="p_name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_target]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_target]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_target]"
+                              name="p_target"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[t_code]"
+                              length="5"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[t_code]"
+                              name="t_code"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pl_id]"
+                              dataType="i4"
+                              name="pl_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="l_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="f_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              name="pl_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[t_id]"
+                              dataType="i4"
+                              name="t_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_id]"
+                              dataType="i4"
+                              name="p_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[pl_num]"
+                              dataType="i4"
+                              name="pl_num" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="p_code" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="p_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[p_target]"
+                              dataType="i4"
+                              name="p_target" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="t_code" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output]"
+                          isErrorOut="true"
+                          name="Flat File Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              codePage="1252"
+                              dataType="text"
+                              description="Flat File Source Error Output Column"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              name="Flat File Source Error Output Column" />
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="OLE DB Destination"
+                      name="OLE DB Destination"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[dbo].[tblData]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepIdentity">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[EXM]"
+                          connectionManagerRefId="Package.ConnectionManagers[EXM]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                          errorOrTruncationOperation="Insert"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="OLE DB Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pl_id]"
+                              cachedDataType="i4"
+                              cachedName="pl_id"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pl_id]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_id]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[l_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="l_name"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[l_name]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[l_name]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[f_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="f_name"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[f_name]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[f_name]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pl_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="100"
+                              cachedName="pl_name"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pl_name]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_name]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[t_id]"
+                              cachedDataType="i4"
+                              cachedName="t_id"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[t_id]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[t_id]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[p_id]"
+                              cachedDataType="i4"
+                              cachedName="p_id"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_id]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_id]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pl_num]"
+                              cachedDataType="i4"
+                              cachedName="pl_num"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pl_num]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[pl_num]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[p_code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="5"
+                              cachedName="p_code"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_code]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_code]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[p_name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="p_name"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_name]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_name]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[p_target]"
+                              cachedDataType="i4"
+                              cachedName="p_target"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_target]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[p_target]" />
+                            <inputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[t_code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="5"
+                              cachedName="t_code"
+                              externalMetadataColumnId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[t_code]"
+                              lineageId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output].Columns[t_code]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pl_id]"
+                              dataType="i4"
+                              name="pl_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[l_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="l_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[f_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="f_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pl_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="100"
+                              name="pl_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[t_id]"
+                              dataType="i4"
+                              name="t_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_id]"
+                              dataType="i4"
+                              name="p_id" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pl_num]"
+                              dataType="i4"
+                              name="pl_num" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="p_code" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="p_name" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[p_target]"
+                              dataType="i4"
+                              name="p_target" />
+                            <externalMetadataColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[t_code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="5"
+                              name="t_code" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="OLE DB Destination Error Output"
+                          synchronousInputId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Parent container\Reload raw data\Load data.Paths[Flat File Source Output]"
+                      endId="Package\Parent container\Reload raw data\Load data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      name="Flat File Source Output"
+                      startId="Package\Parent container\Reload raw data\Load data\Flat File Source.Outputs[Flat File Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Parent container\Reload raw data\Truncate data"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{7F4FA1BB-FDBA-4DFE-BCBB-2D46F2C8B627}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate data"
+              DTS:ThreadHint="0">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{A522647E-853F-4C8E-9A9B-4B1F6334D136}"
+                  SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.tblData;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Parent container\Reload raw data.PrecedenceConstraints[Constraint]"
+              DTS:CreationName=""
+              DTS:DTSID="{BAFCAE6F-3A17-447A-A694-80FE5AC4523E}"
+              DTS:From="Package\Parent container\Reload raw data\Truncate data"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Constraint"
+              DTS:To="Package\Parent container\Reload raw data\Load data" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL LogPackageEnd"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C0E2BA2B-2D32-4B77-AC73-35EE1C4C85C4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL LogPackageEnd"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+          SQLTask:SqlStatementSource="exec dbo.LogPackageEnd&#xA;@PackageLogID = ?&#xA;,@BatchLogID = ?&#xA;,@EndBatchAudit = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::PackageLogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="User::BatchLogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="User::EndBatchAudit"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="17"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL LogPackageTask"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8FE20CB4-A098-4C04-BCB2-1E0E22693198}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL LogPackageTask"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+          SQLTask:SqlStatementSource="exec dbo.LogPackageStart&#xA;@BatchLogID = ?&#xA;,@PackageName = ?&#xA;,@ExecutionInstanceID = ?&#xA;,@MachineName = ?&#xA;,@UserName = ?&#xA;,@StartDatetime = ?&#xA;,@PackageVersionGUID = ?&#xA;,@VersionMajor = ?&#xA;,@VersionMinor = ?&#xA;,@VersionBuild = ?&#xA;,@VersionComment = ?&#xA;,@PackageGUID = ?&#xA;,@CreationDate = ?&#xA;,@CreatedBy = ?"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="BatchLogID"
+            SQLTask:DtsVariableName="User::BatchLogID" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="PackageLogID"
+            SQLTask:DtsVariableName="User::PackageLogID" />
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="EndBatchAudit"
+            SQLTask:DtsVariableName="User::EndBatchAudit" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::BatchLogID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="1"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="2"
+            SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="3"
+            SQLTask:DtsVariableName="System::MachineName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="4"
+            SQLTask:DtsVariableName="System::UserName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="5"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="6"
+            SQLTask:DtsVariableName="System::VersionGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="7"
+            SQLTask:DtsVariableName="System::VersionMajor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="8"
+            SQLTask:DtsVariableName="System::VersionMinor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="9"
+            SQLTask:DtsVariableName="System::VersionBuild"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="10"
+            SQLTask:DtsVariableName="System::VersionComments"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="11"
+            SQLTask:DtsVariableName="System::PackageID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="12"
+            SQLTask:DtsVariableName="System::CreationDate"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="13"
+            SQLTask:DtsVariableName="System::CreatorName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{967AFFD2-6D5D-4DFA-BF20-0B4B92D86DCC}"
+      DTS:From="Package\SQL LogPackageTask"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Parent container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{2FDD96D8-8AE4-465A-A4D1-CB788C144A4D}"
+      DTS:From="Package\Parent container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL LogPackageEnd" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{83DE341E-8C67-409E-8286-991778982BDD}"
+      DTS:EventID="0"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{398A75CC-458C-4D25-9CB3-B558A012B1E1}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\SQL LogPackageError"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4D25DB05-7CC1-49CA-924A-935504408253}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL LogPackageError">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+              SQLTask:SqlStatementSource="exec dbo.LogPackageError&#xA;@PackageLogID = ?&#xA;,@BatchLogID = ?&#xA;,@SourceName = ?&#xA;,@SourceID = ?&#xA;,@ErrorCode = ?&#xA;,@ErrorDescription = ?&#xA;,@EndBatchAudit = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::BatchLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="System::ErrorCode"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="5"
+                SQLTask:DtsVariableName="System::ErrorDescription"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="6"
+                SQLTask:DtsVariableName="User::EndBatchAudit"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="17"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnPostExecute]"
+      DTS:CreationName="OnPostExecute"
+      DTS:DTSID="{06098C0D-AD66-4FC5-AA64-05FF0B908E60}"
+      DTS:EventID="0"
+      DTS:EventName="OnPostExecute"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{D1CA776F-5C8E-49BC-B8E2-6FEBE1168A8A}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPostExecute]\SQL LogTaskPostExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{5617C644-2066-4E50-8B5E-84D0A0CEF76F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL LogTaskPostExecute">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+              SQLTask:SqlStatementSource="exec dbo.LogTaskPostExecute&#xA;@PackageLogID = ?&#xA;,@SourceID = ?&#xA;,@PackageID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::PackageID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnPreExecute]"
+      DTS:CreationName="OnPreExecute"
+      DTS:DTSID="{9D670721-118F-4326-866C-052501F1F059}"
+      DTS:EventID="-1"
+      DTS:EventName="OnPreExecute"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{6FC47A83-16DE-4DE6-BE5B-6B7802AEC2BA}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnPreExecute]\SQL LogTaskPreExecute"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{E0EDD9ED-3992-4DCF-84B7-E6AC0F2A32CA}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL LogTaskPreExecute">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+              SQLTask:SqlStatementSource="exec dbo.LogTaskPreExecute&#xA;@PackageLogID = ?&#xA;,@SourceName = ?&#xA;,@SourceID = ?&#xA;,@PackageID = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::SourceName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="System::SourceID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="System::PackageID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnVariableValueChanged]"
+      DTS:CreationName="OnVariableValueChanged"
+      DTS:DTSID="{74AB42AD-B16A-4CDD-AE18-A07FA389501A}"
+      DTS:EventID="0"
+      DTS:EventName="OnVariableValueChanged"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{ABB68052-EA4C-4853-9B57-C9CF49ACA1E6}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged]\SCR Covert value to string"
+          DTS:CreationName="Microsoft.ScriptTask"
+          DTS:Description="Script Task"
+          DTS:DTSID="{CD7DC265-8F07-49D6-AA81-AD8F087C06E7}"
+          DTS:ExecutableType="Microsoft.ScriptTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SCR Covert value to string">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ScriptProject
+              Name="ST_5ab03287eac7488dace3dde13f507b46"
+              VSTAMajorVersion="15"
+              VSTAMinorVersion="0"
+              Language="VisualBasic"
+              ReadOnlyVariables="System::VariableValue"
+              ReadWriteVariables="User::strVariableValue">
+              <ProjectItem
+                Name="My Project\AssemblyInfo.vb"
+                Encoding="UTF8"><![CDATA[Imports System
+Imports System.Reflection
+Imports System.Runtime.InteropServices
+
+' General Information about an assembly is controlled through the following 
+' set of attributes. Change these attribute values to modify the information
+' associated with an assembly.
+
+' Review the values of the assembly attributes
+
+<Assembly: AssemblyTitle("ST_5ab03287eac7488dace3dde13f507b46")> 
+<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyCompany("ZIONS BANCORPORATION")> 
+<Assembly: AssemblyProduct("ST_5ab03287eac7488dace3dde13f507b46")> 
+<Assembly: AssemblyCopyright("Copyright @ ZIONS BANCORPORATION 2019")> 
+<Assembly: AssemblyTrademark("")> 
+<Assembly: CLSCompliant(True)> 
+
+<Assembly: ComVisible(False)> 
+
+'The following GUID is for the ID of the typelib if this project is exposed to COM
+<Assembly: Guid("f152bf71-4acf-4d78-a7e6-e3e31b9e220a")> 
+
+' Version information for an assembly consists of the following four values:
+'
+'      Major Version
+'      Minor Version 
+'      Build Number
+'      Revision
+'
+' You can specify all the values or you can default the Build and Revision Numbers 
+' by using the '*' as shown below:
+' <Assembly: AssemblyVersion("1.0.*")>
+
+<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyFileVersion("1.0.0.0")> ]]></ProjectItem>
+              <ProjectItem
+                Name="ScriptMain.vb"
+                Encoding="UTF8"><![CDATA[#Region "Help:  Introduction to the script task"
+'The Script Task allows you to perform virtually any operation that can be accomplished in
+'a .Net application within the context of an Integration Services control flow. 
+
+'Expand the other regions which have "Help" prefixes for examples of specific ways to use
+'Integration Services features within this script task.
+#End Region
+
+
+#Region "Imports"
+Imports System
+Imports System.Data
+Imports System.Math
+Imports Microsoft.SqlServer.Dts.Runtime
+#End Region
+
+'ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+'or parent of this class.
+<Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute()> _
+<System.CLSCompliantAttribute(False)> _
+Partial Public Class ScriptMain
+    Inherits Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+
+#Region "Help:  Using Integration Services variables and parameters in a script"
+    'To use a variable in this script, first ensure that the variable has been added to 
+    'either the list contained in the ReadOnlyVariables property or the list contained in 
+    'the ReadWriteVariables property of this script task, according to whether or not your
+    'code needs to write to the variable.  To add the variable, save this script, close this instance of
+    'Visual Studio, and update the ReadOnlyVariables and 
+    'ReadWriteVariables properties in the Script Transformation Editor window.
+    'To use a parameter in this script, follow the same steps. Parameters are always read-only.
+
+    'Example of reading from a variable:
+    ' startTime = Dts.Variables("System::StartTime").Value
+
+    'Example of writing to a variable:
+    ' Dts.Variables("User::myStringVariable").Value = "new value"
+
+    'Example of reading from a package parameter:
+    ' batchId = Dts.Variables("$Package::batchId").Value
+
+    'Example of reading from a project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").Value
+
+    'Example of reading from a sensitive project parameter:
+    ' batchId = Dts.Variables("$Project::batchId").GetSensitiveValue()
+#End Region
+
+#Region "Help:  Firing Integration Services events from a script"
+    'This script task can fire events for logging purposes.
+
+    'Example of firing an error event:
+    ' Dts.Events.FireError(18, "Process Values", "Bad value", "", 0)
+
+    'Example of firing an information event:
+    ' Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, fireAgain)
+
+    'Example of firing a warning event:
+    ' Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0)
+#End Region
+
+#Region "Help:  Using Integration Services connection managers in a script"
+    'Some types of connection managers can be used in this script task.  See the topic 
+    '"Working with Connection Managers Programatically" for details.
+
+    'Example of using an ADO.Net connection manager:
+    ' Dim rawConnection As Object = Dts.Connections("Sales DB").AcquireConnection(Dts.Transaction)
+    ' Dim myADONETConnection As SqlConnection = CType(rawConnection, SqlConnection)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Sales DB").ReleaseConnection(rawConnection)
+
+    'Example of using a File connection manager
+    ' Dim rawConnection As Object = Dts.Connections("Prices.zip").AcquireConnection(Dts.Transaction)
+    ' Dim filePath As String = CType(rawConnection, String)
+    ' <Use the connection in some code here, then release the connection>
+    ' Dts.Connections("Prices.zip").ReleaseConnection(rawConnection)
+#End Region
+
+    'This method is called when this script task executes in the control flow.
+    'Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+    'To open Help, press F1.
+
+    Public Sub Main()
+        Try
+            Dim sVarValue As String = Dts.Variables(“VariableValue”).Value.ToString
+            Dts.Variables(“strVariableValue”).Value = sVarValue
+        Catch ex As Exception
+            Dts.Variables(“strVariableValue”).Value = “Unable to Convert to String: “ & ex.Message
+        End Try
+        Dts.TaskResult = ScriptResults.Success
+    End Sub
+
+#Region "ScriptResults declaration"
+    'This enum provides a convenient shorthand within the scope of this class for setting the
+    'result of the script.
+
+    'This code was generated automatically.
+    Enum ScriptResults
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    End Enum
+
+#End Region
+
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)" GeneratedClassNamespace="$safeprojectname" GeneratedClassName="MySettings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Settings.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+
+Partial Friend NotInheritable Class MySettings
+    Inherits System.Configuration.ApplicationSettingsBase
+
+    Private Shared m_Value As MySettings
+
+    Private Shared m_SyncObject As Object = New Object
+
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Public Shared ReadOnly Property Value() As MySettings
+        Get
+            If (MySettings.m_Value Is Nothing) Then
+                System.Threading.Monitor.Enter(MySettings.m_SyncObject)
+                If (MySettings.m_Value Is Nothing) Then
+                    Try
+                        MySettings.m_Value = New MySettings
+                    Finally
+                        System.Threading.Monitor.Exit(MySettings.m_SyncObject)
+                    End Try
+                End If
+            End If
+            Return MySettings.m_Value
+        End Get
+    End Property
+End Class]]></ProjectItem>
+              <ProjectItem
+                Name="Project"
+                Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_5ab03287eac7488dace3dde13f507b46</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_5ab03287eac7488dace3dde13f507b46</msb:DisplayName>
+    <msb:ProjectId>{CB1A0549-80BC-4845-814D-384302D93EE4}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_5ab03287eac7488dace3dde13f507b46.vbproj" />
+    <msb:File Include="My Project\Resources.Designer.vb" />
+    <msb:File Include="My Project\AssemblyInfo.vb" />
+    <msb:File Include="ScriptMain.vb" />
+    <msb:File Include="My Project\Resources.resx" />
+    <msb:File Include="My Project\Settings.settings" />
+    <msb:File Include="My Project\Settings.Designer.vb" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+              <ProjectItem
+                Name="ST_5ab03287eac7488dace3dde13f507b46.vbproj"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A034526F-1CA0-4235-95B3-004F0ACEDD4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>My Project</AppDesignerFolder>
+    <RootNamespace>ST_5ab03287eac7488dace3dde13f507b46</RootNamespace>
+    <AssemblyName>ST_5ab03287eac7488dace3dde13f507b46</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScriptMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a VB project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="vb" TemplatesPath="" />
+        <Host Name="ScriptTask" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST140</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.resx"
+                Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+              <ProjectItem
+                Name="My Project\Resources.Designer.vb"
+                Encoding="UTF8"><![CDATA['------------------------------------------------------------------------------
+' <autogenerated>
+'     This code was generated by a tool.
+'
+'     Changes to this file may cause incorrect behavior and will be lost if
+'     the code is regenerated.
+' </autogenerated>
+'------------------------------------------------------------------------------
+
+Option Strict Off
+Option Explicit On
+
+
+Namespace My.Resources
+    
+    '''<summary>
+    '''   A strongly-typed resource class, for looking up localized strings, etc.
+    '''</summary>
+    'This class was auto-generated by the Strongly Typed Resource Builder
+    'class via a tool like ResGen or Visual Studio.NET.
+    'To add or remove a member, edit your .ResX file then rerun ResGen
+    'with the /str option, or rebuild your VS project.
+    Class MyResources
+        
+        Private Shared _resMgr As System.Resources.ResourceManager
+        
+        Private Shared _resCulture As System.Globalization.CultureInfo
+        
+        Friend Sub New()
+            MyBase.New
+        End Sub
+        
+        '''<summary>
+        '''   Returns the cached ResourceManager instance used by this class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared ReadOnly Property ResourceManager() As System.Resources.ResourceManager
+            Get
+                If (_resMgr Is Nothing) Then
+                    Dim temp As System.Resources.ResourceManager = New System.Resources.ResourceManager("My.Resources.MyResources", GetType(MyResources).Assembly)
+                    _resMgr = temp
+                End If
+                Return _resMgr
+            End Get
+        End Property
+        
+        '''<summary>
+        '''   Overrides the current thread's CurrentUICulture property for all
+        '''   resource lookups using this strongly typed resource class.
+        '''</summary>
+        <System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)>  _
+        Public Shared Property Culture() As System.Globalization.CultureInfo
+            Get
+                Return _resCulture
+            End Get
+            Set
+                _resCulture = value
+            End Set
+        End Property
+    End Class
+End Namespace]]></ProjectItem>
+              <BinaryItem
+                Name="ST_5ab03287eac7488dace3dde13f507b46.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAGEoclwAAAAAAAAAAOAAIiALAVAAABoAAAAIAAAAAAAAojkA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAFA5AABPAAAAAEAAAJgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAqBkAAAAgAAAAGgAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAJgEAAAAQAAAAAYAAAAcAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAIgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACE
+OQAAAAAAAEgAAAACAAUAvCIAANwVAAABAAAAAAAAAJg4AAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBgAAAoqHgIoGQAACiqmcxoAAAqAAQAABHMbAAAKgAIA
+AARzHAAACoADAAAEcx0AAAqABAAABCoufgEAAARvHgAACioufgIAAARvHwAACioufgMAAARvIAAA
+CioufgQAAARvIQAACioeAigiAAAKKq5+BQAABC0ecgEAAHDQBQAAAigjAAAKbyQAAApzJQAACoAF
+AAAEfgUAAAQqGn4GAAAEKh4CgAYAAAQqQnMiAAAKKCYAAAqACAAABCoeAignAAAKKgAAGzABAD8A
+AAAAAAAAfgcAAAQtMn4IAAAEKCYAAAooKAAACn4HAAAELRxzDQAABoAHAAAE3hB+CAAABCgmAAAK
+KCkAAArcfgcAAAQqAAEQAAACAB0ADCkAEAAAAAAeAigqAAAKKhswAwCCAAAAAQAAEQIoKwAACm8s
+AAAKcjMAAHBvLQAACm8uAAAKby8AAAoKAigrAAAKbywAAApyTwAAcG8tAAAKBm8wAAAK3jglKDEA
+AAoLAigrAAAKbywAAApyTwAAcG8tAAAKcnEAAHAHbzIAAAooMwAACm8wAAAKKDQAAAreAAIoKwAA
+ChZvNQAACioAAAEQAAAAAAAAPT0AOCUAAAE2AgMoJgAACig2AAAKKh4CKDcAAAoqLtAIAAACKCMA
+AAoqHgIoLwAACioAABMwAQAUAAAAAgAAEQKMBQAAGy0IKAEAACsKKwICCgYqIgP+FQUAABsqAAAA
+EzACACgAAAADAAARAns5AAAKbzoAAAoKBowIAAAbLRIoAgAAKwoCezkAAAoGbzsAAAoGKkoCKCIA
+AAoCczwAAAp9OQAACioAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAA3AcAACN+
+AABICAAAMAkAACNTdHJpbmdzAAAAAHgRAACwAAAAI1VTACgSAAAQAAAAI0dVSUQAAAA4EgAApAMA
+ACNCbG9iAAAAAAAAAAIAAAFXHaIJCQ8AAAD6ATMAFgAAAQAAADAAAAAKAAAADAAAABkAAAAEAAAA
+PAAAAAIAAAA3AAAAAwAAAAQAAAAIAAAACQAAAAgAAAABAAAABQAAAAEAAAADAAAAAwAAAAIAAAAA
+AC4FAQAAAAAABgBtA74HBgASBL4HBgBEAv8GDwBkCAAABgCFAtsFBgBQA9sFBgD5A9sFBgCNA9sF
+BgCmA9sFBgDMAtsFBgDBA18FBgBxAngHBgDtAXgHBgAYA9sFBgDnAmwECgAQAncGCgDYARgFCgBY
+AhgFDgCwAU4HDgCtBhIHBgAAA/8GDgCcApcHDgC0Ar0ABgDNCF8FDgCTBk4HDgA1A70ABgBjAV8F
+DgABANwECgD7AWsFBgBnBt4HBgD3BcYFCgDAAbEFBgAnAv8GEgDXA7MEEgCUAbMEBgCPBF8FBgDt
+BV8FBgBmBV8FBgAcAV8FBgAnCdsFBgCTCL4HBgD3BlsEEgAGBbMEFgB3CEABFgATAUABDgCoAJcH
+BgCIBF8FBgDgBl8FAAAAAE8AAAAAAAEAAQAAAAAAowX8CE0AAQABAAAAAACrBvwIUQABAAIAAAEQ
+ANQI/AhhAAEAAwAAAAAAIAjvB2EABQAIAAABEACBCCsAgQAHAAwAAQAAAIgFKwCNAAkADwAFAQAA
+QAcAAGEACQARAAUBAAAQAAAAYQAJABgAAgEAALIIAACZAAoAGgAxACwGEQExAAMGGQExABcGIQEx
+AEUGKQERALYGMQERAIgBNQERADAEOQERAMcIPQEhAPIIzwAGBqAAQAFWgKIIQwFWgGgBQwFQIAAA
+AAAGGOoGBgABAFggAAAAAAYY6gYGAAEAYCAAAAAAERjwBqMAAQCKIAAAAAATCJ4GRwEBAJYgAAAA
+ABMIkwVMAQEAoiAAAAAAEwiPBlEBAQCuIAAAAAATCDAHVgEBALogAAAAAAMY6gYGAAEAwiAAAAAA
+FghjBlsBAQDuIAAAAAAWCHABYAEBAPUgAAAAABYIfAFlAQEA/SAAAAAAERjwBqMAAgAOIQAAAAAG
+GOoGBgACABghAAAAABYIOARrAQIAdCEAAAAABhjqBgYAAgB8IQAAAAAGAI4FBgACABwiAAAAAMYC
+jAinAAIAKiIAAAAAxgL7AKwAAwAyIgAAAACDAGABcAEDAD4iAAAAAMYChgSNAAMASCIAAAAAEQCN
+AHUBAwBoIgAAAAABAHkAfQEEALogAAAAAAYY6gYGAAUAdCIAAAAAAwjiAEoABQCoIgAAAAAGGOoG
+BgAFAAAAAQBVBAAAAQABBgAAAQDyAAAAAQDyAAkA6gYBABEA6gYGABkA6gYKACkA6gYQADEA6gYQ
+ADkA6gYQAEEA6gYQAEkA6gYQAFEA6gYQAFkA6gYVAGEA6gYVAGkA6gYQAHEA6gYQAHkA6gYQAIEA
+6gYaAJEA6gYgAKkA6gYGALEA6gYGALkA6gYGANEA6gYmAOkA6gYQAAkB6gYGABEB6gYGAJkA6gYG
+AKEA6gYGAAwA6gYGABQA6gYGABwA6gYGACQA6gYGAAwA4gBKABQA4gBKABwA4gBKACQA4gBKAMEA
+6gYGANkALgFPANkAIwlXAPEA6gZdAEkBTARlAAEB6gYGAFEBmAZqAFEB3ghqABkB6gYGABkBqgh2
+AFkBcwh8AGEBVgWCAGkBOASJAMEAhgSNAGkBQgSRAHEB0AaWACkBBwGNAHkBwAidAHEBvgajAFkB
+4wgBAMEAjAinAMEA+wCsAIEB0wC4ADQA8gjPADwAOARKADwAQgTmADwA6gYGAAgALAAHAQgAMAAM
+ASkAqwBdAy4ACwCtAS4AEwC2AS4AGwDVAS4AIwDeAS4AKwAHAi4AMwANAi4AOwDeAS4AQwAnAi4A
+SwAHAi4AUwBSAi4AWwAHAi4AYwBYAi4AawCCAi4AcwCPAkAAiwAMAUAAgwDZAkMAewDiAkMAgwDZ
+AkkAqwBuA2MAewDiAmMAgwDZAmkAqwCCA4AAiwAMAYMAkwAMAYMAmwAMAYMAewDiAokAqwCPA6AA
+iwAMAakAgwDVAcAAiwAMAckAgwDVAeAAiwAMAeMAuwAMAeMAUwAHAukAswAMAQMBgwDZAgMBowD7
+AiMBgwDZAiMBWwAHAiACgwDZAiACiwAMAUACgwDZAkACiwAMAWACgwDZAmACiwAMAYACgwDZAoAC
+iwAMAaACiwAMAcACiwAMAeACiwAMAeACgwDZAgADiwAMASADiwAMASADgwDZAm8AsADDAAQAAQAF
+AAUABgAHAAkACAAAAK0GhQEAAKUFigEAAJMGjwEAAEIHlAEAAGcGmQEAAIwBngEAAFUEowEAAOYA
+qAECAAQAAwACAAUABQACAAYABwACAAcACQACAAkACwACAAoADQABAAsADQACAA4ADwACABgAEQAu
+ADUAPABDALUAyADXAN4ABIAAAAEAAAAAAAAAAAAAAAAAKwAAAAQAAAAAAAAAAAAAAOwAtAAAAAAA
+BAAAAAAAAAAAAAAA7ABfBQAAAAAKAAAAAAAAAAAAAAD1AL0AAAAAAA4AAAAAAAAAAAAAAP4AlAQA
+AAAADgAAAAAAAAAAAAAA/gBYAAAAAAAAAAAAAQAAACwIAAAIAAQACQAEAAoABwAAABAAEgB3AAAA
+EAArAHcAAAAAAC0AdwBxAL4AcQDhAAAAAAAAQ29udGV4dFZhbHVlYDEAVGhyZWFkU2FmZU9iamVj
+dFByb3ZpZGVyYDEAU1RfNWFiMDMyODdlYWM3NDg4ZGFjZTNkZGUxM2Y1MDdiNDYAPE1vZHVsZT4A
+TWljcm9zb2Z0LlNxbFNlcnZlci5NYW5hZ2VkRFRTAFQARGlzcG9zZV9fSW5zdGFuY2VfXwBDcmVh
+dGVfX0luc3RhbmNlX18AdmFsdWVfXwBQcm9qZWN0RGF0YQBtc2NvcmxpYgBNaWNyb3NvZnQuVmlz
+dWFsQmFzaWMAQ3JlYXRlSW5zdGFuY2UAZ2V0X0dldEluc3RhbmNlAGluc3RhbmNlAEdldEhhc2hD
+b2RlAGdldF9NZXNzYWdlAFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFu
+ZGxlAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAR2V0VHlwZQBGYWlsdXJlAGdldF9D
+dWx0dXJlAHNldF9DdWx0dXJlAF9yZXNDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFz
+ZQBBcHBsaWNhdGlvbkJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxl
+U3RhdGUAR3VpZEF0dHJpYnV0ZQBIZWxwS2V5d29yZEF0dHJpYnV0ZQBHZW5lcmF0ZWRDb2RlQXR0
+cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBF
+ZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQ29tVmlzaWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxl
+QXR0cmlidXRlAFN0YW5kYXJkTW9kdWxlQXR0cmlidXRlAEhpZGVNb2R1bGVOYW1lQXR0cmlidXRl
+AEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBEZWJ1
+Z2dlckhpZGRlbkF0dHJpYnV0ZQBBc3NlbWJseUZpbGVWZXJzaW9uQXR0cmlidXRlAE15R3JvdXBD
+b2xsZWN0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRp
+b25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlD
+b3B5cmlnaHRBdHRyaWJ1dGUAQ0xTQ29tcGxpYW50QXR0cmlidXRlAFNTSVNTY3JpcHRUYXNrRW50
+cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGli
+aWxpdHlBdHRyaWJ1dGUAbV9WYWx1ZQBnZXRfVmFsdWUAc2V0X1ZhbHVlAEdldE9iamVjdFZhbHVl
+AFN5c3RlbS5UaHJlYWRpbmcAU3lzdGVtLlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBNYXRo
+AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5U
+YXNrcy5TY3JpcHRUYXNrAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5NeVNlcnZpY2VzLkludGVybmFs
+AFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25lbnRNb2RlbABTVF81YWIwMzI4N2VhYzc0
+ODhkYWNlM2RkZTEzZjUwN2I0Ni5kbGwAZ2V0X0l0ZW0AU3lzdGVtAEVudW0AU3lzdGVtLkNvbXBv
+bmVudE1vZGVsLkRlc2lnbgBTY3JpcHRNYWluAGdldF9BcHBsaWNhdGlvbgBNeUFwcGxpY2F0aW9u
+AFN5c3RlbS5Db25maWd1cmF0aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0
+aW9uAEV4Y2VwdGlvbgBDdWx0dXJlSW5mbwBtX0FwcE9iamVjdFByb3ZpZGVyAG1fVXNlck9iamVj
+dFByb3ZpZGVyAG1fQ29tcHV0ZXJPYmplY3RQcm92aWRlcgBtX015V2ViU2VydmljZXNPYmplY3RQ
+cm92aWRlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAFN5c3RlbS5Db2RlRG9tLkNvbXBpbGVyAGdldF9V
+c2VyAEVudGVyAGdldF9Db21wdXRlcgBNeUNvbXB1dGVyAF9yZXNNZ3IAQ2xlYXJQcm9qZWN0RXJy
+b3IAU2V0UHJvamVjdEVycm9yAEFjdGl2YXRvcgAuY3RvcgAuY2N0b3IATW9uaXRvcgBTeXN0ZW0u
+RGlhZ25vc3RpY3MATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkRldmljZXMAZ2V0X1dlYlNlcnZpY2Vz
+AE15V2ViU2VydmljZXMATWljcm9zb2Z0LlZpc3VhbEJhc2ljLkFwcGxpY2F0aW9uU2VydmljZXMA
+U3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzAE1pY3Jvc29mdC5WaXN1YWxCYXNpYy5Db21w
+aWxlclNlcnZpY2VzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJlc291
+cmNlcwBTVF81YWIwMzI4N2VhYzc0ODhkYWNlM2RkZTEzZjUwN2I0Ni5NeS5SZXNvdXJjZXMATXlS
+ZXNvdXJjZXMAU1RfNWFiMDMyODdlYWM3NDg4ZGFjZTNkZGUxM2Y1MDdiNDYuUmVzb3VyY2VzLnJl
+c291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBnZXRfVmFyaWFibGVzAE15U2V0dGluZ3MARXF1YWxzAFJ1
+bnRpbWVIZWxwZXJzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAENvbmNhdABtX1N5bmNP
+YmplY3QATXlQcm9qZWN0AEV4aXQAc2V0X1Rhc2tSZXN1bHQAbV9Db250ZXh0AFNUXzVhYjAzMjg3
+ZWFjNzQ4OGRhY2UzZGRlMTNmNTA3YjQ2Lk15AGdldF9Bc3NlbWJseQAAMU0AeQAuAFIAZQBzAG8A
+dQByAGMAZQBzAC4ATQB5AFIAZQBzAG8AdQByAGMAZQBzAAAbVgBhAHIAaQBhAGIAbABlAFYAYQBs
+AHUAZQAAIXMAdAByAFYAYQByAGkAYQBiAGwAZQBWAGEAbAB1AGUAADtVAG4AYQBiAGwAZQAgAHQA
+bwAgAEMAbwBuAHYAZQByAHQAIAB0AG8AIABTAHQAcgBpAG4AZwA6ACAAAAAAAMJDQBZcNItPlhhB
+ULua1BkABCABAQgDIAABBSABARERBCABAQ4EIAEBAgUgAgEODgUgAQERRQcgBAEODg4OBhUSJAES
+DAYVEiQBEggGFRIkARJlBhUSJAESIAQgABMABwABEm0RgJ0FIAASgKEHIAIBDhKAoQQAARwcBAAB
+ARwGBwIOEoCVBSAAEoCtBSAAEoCxBiABEoC1HAMgABwDIAAOBCABARwGAAEBEoCVBQACDg4OAwAA
+AQQgAQIcAyAACAQHAR4AAh4ABRABAB4ABAoBHgAEBwETAAYVEiQBEwAHBhUScQETAAYVEnEBEwAC
+EwAECgETAAUgAQETAAi3elxWGTTgiQiwP19/EdUKOgiJhF3NgIDMkQQAAAAABAEAAAAHBhUSJAES
+DAcGFRIkARIIBwYVEiQBEmUHBhUSJAESIAMGEnkDBhJ9AwYSGAIGHAIGCAMGESgEAAASDAQAABII
+BAAAEmUEAAASIAQAABJ5BAAAEn0FAAEBEn0EAAASGAQgABJtBxABAR4AHgAHMAEBARAeAAQIABIM
+BAgAEggECAASZQQIABIgBAgAEnkECAASfQQIABIYBCgAEwAIAQAIAAAAAAAeAQABAFQCFldyYXBO
+b25FeGNlcHRpb25UaHJvd3MBCAEAAgAAAAAAKAEAI1NUXzVhYjAzMjg3ZWFjNzQ4OGRhY2UzZGRl
+MTNmNTA3YjQ2AAAFAQAAAAAZAQAUWklPTlMgQkFOQ09SUE9SQVRJT04AACoBACVDb3B5cmlnaHQg
+QCBaSU9OUyBCQU5DT1JQT1JBVElPTiAyMDE5AAAFAQABAAApAQAkZjE1MmJmNzEtNGFjZi00ZDc4
+LWE3ZTYtZTNlMzFiOWUyMjBhAAAMAQAHMS4wLjAuMAAASQEAGi5ORVRGcmFtZXdvcmssVmVyc2lv
+bj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUIAQABAAAA
+AAAYAQAKTXlUZW1wbGF0ZQgxMS4wLjAuMAAAYQEANFN5c3RlbS5XZWIuU2VydmljZXMuUHJvdG9j
+b2xzLlNvYXBIdHRwQ2xpZW50UHJvdG9jb2wSQ3JlYXRlX19JbnN0YW5jZV9fE0Rpc3Bvc2VfX0lu
+c3RhbmNlX18AAAAQAQALTXkuQ29tcHV0ZXIAABMBAA5NeS5BcHBsaWNhdGlvbgAADAEAB015LlVz
+ZXIAABMBAA5NeS5XZWJTZXJ2aWNlcwAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNl
+cy5SZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0
+cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVu
+dGltZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAAB4OQAAAAAAAAAAAACSOQAAACAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAhDkAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRs
+bAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAASAAA
+AFhAAAA8BAAAAAAAAAAAAAA8BDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAAAAAA
+vQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQAAAAB
+AFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBuAAAA
+AAAAALAEnAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAeAMAAAEAMAAwADAAMAAw
+ADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAAEoAFQABAEMAbwBtAHAAYQBuAHkA
+TgBhAG0AZQAAAAAAWgBJAE8ATgBTACAAQgBBAE4AQwBPAFIAUABPAFIAQQBUAEkATwBOAAAAAABw
+ACQAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAUwBUAF8ANQBhAGIAMAAzADIA
+OAA3AGUAYQBjADcANAA4ADgAZABhAGMAZQAzAGQAZABlADEAMwBmADUAMAA3AGIANAA2AAAAMAAI
+AAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAxAC4AMAAuADAALgAwAAAAcAAoAAEASQBuAHQA
+ZQByAG4AYQBsAE4AYQBtAGUAAABTAFQAXwA1AGEAYgAwADMAMgA4ADcAZQBhAGMANwA0ADgAOABk
+AGEAYwBlADMAZABkAGUAMQAzAGYANQAwADcAYgA0ADYALgBkAGwAbAAAAHAAJgABAEwAZQBnAGEA
+bABDAG8AcAB5AHIAaQBnAGgAdAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgAFoASQBPAE4AUwAg
+AEIAQQBOAEMATwBSAFAATwBSAEEAVABJAE8ATgAgADIAMAAxADkAAAAqAAEAAQBMAGUAZwBhAGwA
+VAByAGEAZABlAG0AYQByAGsAcwAAAAAAAAAAAHgAKAABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABl
+AG4AYQBtAGUAAABTAFQAXwA1AGEAYgAwADMAMgA4ADcAZQBhAGMANwA0ADgAOABkAGEAYwBlADMA
+ZABkAGUAMQAzAGYANQAwADcAYgA0ADYALgBkAGwAbAAAAGgAJAABAFAAcgBvAGQAdQBjAHQATgBh
+AG0AZQAAAAAAUwBUAF8ANQBhAGIAMAAzADIAOAA3AGUAYQBjADcANAA4ADgAZABhAGMAZQAzAGQA
+ZABlADEAMwBmADUAMAA3AGIANAA2AAAANAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBu
+AAAAMQAuADAALgAwAC4AMAAAADgACAABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4A
+AAAxAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAApDkAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+            </ScriptProject>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8F5157ED-09C7-4FA5-AEC2-D713DE7CBF54}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL LogVariableValueChanged">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{23C0710E-B54A-430C-AE1E-9C41AC41C667}"
+              SQLTask:SqlStatementSource="exec dbo.LogVariableValueChanged&#xA;@PackageLogID = ?&#xA;,@VariableName = ?&#xA;,@VariableValue = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::PackageLogID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="System::VariableName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::strVariableValue"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package.EventHandlers[OnVariableValueChanged].PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{7EB0E13A-62B5-406D-8FBC-E0C98CE04FCD}"
+          DTS:From="Package.EventHandlers[OnVariableValueChanged]\SCR Covert value to string"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged" />
+      </DTS:PrecedenceConstraints>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <AnnotationLayout
+          Text="/*****************************************************************************************************************&#xA;NAME:    LoadEXM.dtsx&#xA;PURPOSE: Load EXM database&#xA;&#xA;SUPPORT: Jaussi Consulting LLC&#xA;         www.jaussiconsulting.net&#xA;         jon@jaussiconsulting.net&#xA;&#xA;MODIFICATION LOG:&#xA;Ver       Date         Author                 Description&#xA;-------   ----------   --------------------   ------------------------------------------------------------&#xA;1.0       11/03/2019   Jon Jaussi (JJAUSSI)   1. Built this package for LDS BC IT243&#xA;&#xA;&#xA;RUNTIME: &#xA;1 sec&#xA;&#xA;NOTES:&#xA;This package loads the EXM (Example) database &#xA;&#xA;LICENSE: This code is covered by the GNU General Public License which guarantees end users&#xA;the freedom to run, study, share, and modify the code. This license grants the recipients&#xA;of the code the rights of the Free Software Definition. All derivative work can only be&#xA;distributed under the same license terms.&#xA;&#xA;******************************************************************************************************************/"
+          ParentId="Package\Documentation"
+          Size="740,367"
+          Id="ce57ee3c-d205-4c9a-9e88-24b1ee49b8eb"
+          TopLeft="5.50000000000006,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Consolas"
+              Size="11.25"
+              Color="#FFFFFFFF">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="751,428"
+          Size="176,43"
+          Id="Package\Documentation"
+          TopLeft="5.50000000000006,519.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Parent container\Output raw data"
+          TopLeft="5.50000000000003,108.5" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Parent container\Reload raw data\Load data"
+          TopLeft="15,107.5" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Parent container\Reload raw data\Truncate data"
+          TopLeft="5.50000000000001,5.5" />
+        <EdgeLayout
+          Id="Package\Parent container\Reload raw data.PrecedenceConstraints[Constraint]"
+          TopLeft="79,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="158,205"
+          Size="158,248"
+          Id="Package\Parent container\Reload raw data"
+          TopLeft="223,5.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="386,309"
+          Size="386,352"
+          Id="Package\Parent container"
+          TopLeft="141.5,107.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\SQL LogPackageEnd"
+          TopLeft="242,520" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\SQL LogPackageTask"
+          TopLeft="240,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="334.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="334.5,459.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60.5"
+              Start="0,0"
+              End="0,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="NaN,NaN"
+          Id="Package.EventHandlers[OnError]\SQL LogPackageError"
+          TopLeft="NaN,NaN" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnPostExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="NaN,NaN"
+          Id="Package.EventHandlers[OnPostExecute]\SQL LogTaskPostExecute"
+          TopLeft="NaN,NaN" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="NaN,NaN"
+          Id="Package.EventHandlers[OnPreExecute]\SQL LogTaskPreExecute"
+          TopLeft="NaN,NaN" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnVariableValueChanged]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="NaN,NaN"
+          Id="Package.EventHandlers[OnVariableValueChanged]\SCR Covert value to string"
+          TopLeft="NaN,NaN" />
+        <NodeLayout
+          Size="NaN,NaN"
+          Id="Package.EventHandlers[OnVariableValueChanged]\SQL LogVariableValueChanged"
+          TopLeft="NaN,NaN" />
+        <EdgeLayout
+          Id="Package.EventHandlers[OnVariableValueChanged].PrecedenceConstraints[Constraint]"
+          TopLeft="NaN,NaN">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="{x:Null}"
+              Start="0,0"
+              End="0,0">
+              <mssgle:Curve.Segments>
+                <x:Null />
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Parent container\Output raw data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Parent container\Output raw data\OLE DB Source"
+          TopLeft="15,5.5" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Parent container\Output raw data\Flat File Destination"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\Parent container\Output raw data.Paths[OLE DB Source Output]"
+          TopLeft="93.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Parent container\Output raw data\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Parent container\Reload raw data\Load data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Parent container\Reload raw data\Load data\OLE DB Destination"
+          TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Parent container\Reload raw data\Load data\Flat File Source"
+          TopLeft="16,5.5" />
+        <EdgeLayout
+          Id="Package\Parent container\Reload raw data\Load data.Paths[Flat File Source Output]"
+          TopLeft="94,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Parent container\Reload raw data\Load data\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
