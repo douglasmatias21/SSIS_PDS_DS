@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "LDSBC_IT243_bf", "LDSBC_IT243_bf\LDSBC_IT243_bf.dtproj", "{6A54F3C8-0CEE-48A1-94C6-308FFC1F6326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A54F3C8-0CEE-48A1-94C6-308FFC1F6326}.Development|Default.ActiveCfg = Development
+		{6A54F3C8-0CEE-48A1-94C6-308FFC1F6326}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F48B3CB-885F-4530-A452-ED5DEBB21233}
+	EndGlobalSection
+EndGlobal
