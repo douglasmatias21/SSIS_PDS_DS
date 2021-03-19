@@ -8,21 +8,21 @@
     <Name>LDSBC_IT243_bf.database</Name>
     <FullPath>LDSBC_IT243_bf.database</FullPath>
   </Database>
-  <DataSources />
+  <DataSources /> 
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
       <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{b8b5813e-ced6-49ab-8931-79f498340f68}</SSIS:Property>
-          <SSIS:Property SSIS:Name="Name">LDSBC_IT243_bf</SSIS:Property>
+          <SSIS:Property SSIS:Name="Name">LDSBC_IT243_DS</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
           </SSIS:Property>
           <SSIS:Property SSIS:Name="CreationDate">2020-02-10T18:24:06.6541696-07:00</SSIS:Property>
-          <SSIS:Property SSIS:Name="CreatorName">LDS\brunodifreitas</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorName">LDSdouglasmatias</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">A-1079845</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
@@ -42,7 +42,7 @@
             <SSIS:PackageMetaData SSIS:Name="SSIS_PDS_Template_bf.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{A0EC5431-AE64-4C39-B59E-C65AFAC927E0}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">SSIS_PDS_Template_bf</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">SSIS_PDS_Template_DS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>

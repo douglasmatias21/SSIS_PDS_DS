@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="2/12/2020 6:19:47 PM"
+  DTS:CreationDate="3/18/2021 6:19:47 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="A-1079845"
-  DTS:CreatorName="LDS\brunodifreitas"
+  DTS:CreatorName="LDS\douglasmatias"
   DTS:DTSID="{A0EC5431-AE64-4C39-B59E-C65AFAC927E0}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.71"
   DTS:LocaleID="1033"
-  DTS:ObjectName="SSIS_PDS_Template_bf"
+  DTS:ObjectName="SSIS_PDS_Template_DS"
   DTS:PackageType="5"
   DTS:VersionBuild="7"
   DTS:VersionGUID="{369BB4CF-DAF5-401D-8020-65FF570F4A1F}">
@@ -143,7 +143,7 @@
       DTS:CreationName=""
       DTS:DTSID="{543E22F9-D16B-48B3-9FE9-865AD6DC3FA1}"
       DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
+      DTS:Namespace="User" 
       DTS:ObjectName="v_data_share_root">
       <DTS:VariableValue
         DTS:DataType="8">C:\Users\brunodifreitas\Desktop\GIT Repository\DFNB_src\txt_files\</DTS:VariableValue>
