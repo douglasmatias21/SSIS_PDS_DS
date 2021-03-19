@@ -15,7 +15,7 @@
       <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{b8b5813e-ced6-49ab-8931-79f498340f68}</SSIS:Property>
-          <SSIS:Property SSIS:Name="Name">LDSBC_IT243_bf</SSIS:Property>
+          <SSIS:Property SSIS:Name="Name">LDSBC_IT243_DS</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
