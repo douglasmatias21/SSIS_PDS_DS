@@ -30,9 +30,9 @@ Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
 1.0      11/03/2019  JJAUSSI          1. Created this process for LDS BC IT243
 1.1      11/09/2019  JJAUSSI          1. Added conn_DFNB3
-1.1		 03/04/2020  Bruno	          2. 4.4		
-1.2		04/06/2020	 Bruno			  3. 7.2 		 	
-1.3		04/06/2020	 Bruno			  4. 7.3
+1.1		 03/015/2020  Douglas	          2. 4.4		
+1.2		04/18/2021	 Douglas			  3. 7.2 		 	
+1.3		04/18/2021	 Douglas		  4. 7.3
 
 
 RUNTIME: 
@@ -111,7 +111,7 @@ FROM	dbo.[SSIS Configurations] AS c;
         -- 2) Solution Level Configurations
 
 
-        -- 2.1) LDSBC_IT243_bf
+        -- 2.1) LDSBC_IT243_DS
 
         DELETE FROM dbo.[SSIS Configurations]
          WHERE ConfigurationFilter = 'LDSBC_IT243_bf';
@@ -125,7 +125,7 @@ FROM	dbo.[SSIS Configurations] AS c;
                                             , ConfiguredValueType)
         VALUES
               (
-               'LDSBC_IT243_bf'
+               'LDSBC_IT243_DS'
              , 'C:\Users\brunodifreitas\Desktop\GIT Repository\DFNB_src\txt_files\'
              , '\Package.Variables[User::v_data_share_root].Properties[Value]'
              , 'String'
@@ -155,7 +155,7 @@ FROM	dbo.[SSIS Configurations] AS c;
         VALUES
               (
                'SSIS_PDS_Template'
-             , 'C:\Users\brunodifreitas\Desktop\GIT Repository\DFNB_src\txt_files\'
+             , 'C:\Users\douglassilva\Desktop\GIT Repository\DFNB_src\txt_files\'
              , '\Package.Variables[User::v_data_share_root].Properties[Value]'
              , 'String'
               );
@@ -194,7 +194,7 @@ FROM	dbo.[SSIS Configurations] AS c;
         VALUES
               (
                'LoadEXM_bf'
-             , 'C:\Users\brunodifreitas\Desktop\GIT Repository\EXM\txt_files'
+             , 'C:\Users\douglassilva\Desktop\GIT Repository\EXM\txt_files'
              , '\Package.Variables[User::v_data_share_root].Properties[Value]'
              , 'String'
               );
@@ -214,7 +214,7 @@ FROM	dbo.[SSIS Configurations] AS c;
         VALUES
               (
                'LoadNAICSCodeHierDim_bf'
-             , 'C:\Users\brunodifreitas\Desktop\GIT Repository\DFNB_dw\xls_files'
+             , 'C:\Users\douglassilva\Desktop\GIT Repository\DFNB_dw\xls_files'
              , '\Package.Variables[User::v_data_share_root].Properties[Value]'
              , 'String'
               );
