@@ -38,7 +38,7 @@ Begin
 End
 
 SELECT @PackageID = PackageID
-    FROM dbo.Package 
+    FROM dbo.Package  
     WHERE PackageGUID = @PackageGUID
     AND PackageName = @PackageName
 
