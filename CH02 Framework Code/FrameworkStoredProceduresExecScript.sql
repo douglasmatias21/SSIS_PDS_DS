@@ -5,7 +5,7 @@ exec dbo.LogPackageStart
 ,@MachineName = ?
 ,@UserName = ?
 ,@StartDatetime = ?
-,@PackageVersionGUID = ?
+,@PackageVersionGUID = ? 
 ,@VersionMajor = ?
 ,@VersionMinor = ?
 ,@VersionBuild = ?
