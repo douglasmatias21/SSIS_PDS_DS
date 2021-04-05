@@ -19,7 +19,7 @@
     <ProjectBuildItemInfo>
       <Name>LoadDFNB3_km.dtsx</Name>
       <LastWriteTime>2021-03-23T01:38:21.1448666Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel> 
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadNAICSCodeHierDim_km.dtsx</Name>
