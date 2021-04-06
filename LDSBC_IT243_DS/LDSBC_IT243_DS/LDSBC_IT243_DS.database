@@ -6,7 +6,7 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
-  <DataSourceImpersonationInfo>
+  <DataSourceImpersonationInfo> 
     <ImpersonationMode>Default</ImpersonationMode>
     <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
   </DataSourceImpersonationInfo>
