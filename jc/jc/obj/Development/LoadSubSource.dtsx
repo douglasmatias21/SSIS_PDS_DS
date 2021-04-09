@@ -171,7 +171,7 @@
                       lineageId="Package\hidden_brain_2019_01_21\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
+                  </outputColumns> 
                   <externalMetadataColumns />
                 </output>
               </outputs>
