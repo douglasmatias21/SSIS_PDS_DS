@@ -33,7 +33,7 @@
       DTS:refId="Package.ConnectionManagers[EXM]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{9D1E5F95-928E-4970-B679-943F14319D68}"
-      DTS:ObjectName="EXM">
+      DTS:ObjectName="EXM"> 
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::conn_EXM]</DTS:PropertyExpression>
       <DTS:ObjectData>
