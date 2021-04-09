@@ -35,7 +35,7 @@
           DTS:CodePage="1252"
           DTS:ConnectionString="C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_240\repos\EXM\txt_files\DATA.txt">
           <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
+            <DTS:FlatFileColumn 
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x003B_"
               DTS:DataType="3"
