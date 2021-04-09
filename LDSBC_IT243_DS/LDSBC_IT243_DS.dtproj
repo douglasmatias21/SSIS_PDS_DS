@@ -7,7 +7,7 @@
   <Database>
     <Name>LDSBC_IT243_DS.database</Name>
     <FullPath>LDSBC_IT243_km.database</FullPath>
-  </Database>
+  </Database> 
   <DataSources />
   <DataSourceViews />
   <DeploymentModelSpecificContent>
