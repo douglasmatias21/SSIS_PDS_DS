@@ -182,7 +182,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="SEQ Package Logic">
       <DTS:Variables />
-      <DTS:Executables>
+      <DTS:Executables> 
         <DTS:Executable
           DTS:refId="Package\SEQ Package Logic\MsgBox check variable"
           DTS:CreationName="Microsoft.ScriptTask"
