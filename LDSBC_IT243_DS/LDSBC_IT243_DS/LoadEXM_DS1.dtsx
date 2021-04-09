@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="2/3/2021 11:46:37 PM"
+  DTS:CreationDate="3/18/2021 11:46:37 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-PSBEJ23V"
-  DTS:CreatorName="LAPTOP-PSBEJ23V\Wing Yu"
+  DTS:CreatorName="LAPTOP-PSBEJ23V\Douglas Silva"
   DTS:DTSID="{DF56A16B-8C75-472F-8215-18E975F11821}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="LoadEXM_wc"
+  DTS:ObjectName="LoadEXM_DS"
   DTS:PackageType="5"
   DTS:VersionBuild="61"
   DTS:VersionGUID="{F81823E5-8A62-4BAA-933F-7C48727826DE}">
@@ -41,7 +41,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Wing Yu\Desktop\LDS Business College Course\Semester 4\IT 243-01 Data Warehousing\Ensign College\repos\EXM_wc\txt_files\DATA.txt">
+          DTS:ConnectionString="C:\Users\Douglas Silva\Desktop\LDS Business College Course\Semester 4\IT 243-01 Data Warehousing\Ensign College\repos\EXM_wc\txt_files\DATA.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
