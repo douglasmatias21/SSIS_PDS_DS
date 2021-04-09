@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="2/3/2021 11:46:37 PM"
+  DTS:CreationDate="3/18/2021 11:46:37 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-PSBEJ23V"
-  DTS:CreatorName="LAPTOP-PSBEJ23V\Wing Yu"
+  DTS:CreatorName="LAPTOP-PSBEJ23VDouglas Silva"
   DTS:DTSID="{DF56A16B-8C75-472F-8215-18E975F11821}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1033"
-  DTS:ObjectName="LoadEXM_wc"
+  DTS:ObjectName="LoadEXM_DS"
   DTS:PackageType="5"
   DTS:VersionBuild="61"
   DTS:VersionGUID="{F81823E5-8A62-4BAA-933F-7C48727826DE}">
@@ -24,7 +24,7 @@
       DTS:ObjectName="(local).EXM">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=(local);Initial Catalog=EXM;Integrated Security=True;Application Name=SSIS-LoadEXM_wc-{B610A6D1-AF61-4798-BCF3-E73858129273}(local).EXM1;" />
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=EXM;Integrated Security=True;Application Name=SSIS-LoadEXM_DS-{B610A6D1-AF61-4798-BCF3-E73858129273}(local).EXM1;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
