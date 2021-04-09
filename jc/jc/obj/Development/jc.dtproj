@@ -33,7 +33,7 @@
           <SSIS:Package SSIS:Name="LoadSubSource.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
-        <SSIS:DeploymentInfo>
+        <SSIS:DeploymentInfo> 
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="LoadSubSource.dtsx">
