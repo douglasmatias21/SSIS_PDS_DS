@@ -51,7 +51,7 @@
           DTS:ConnectionString="Data Source=localhost;Initial Catalog=SSIS_PDS;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
+  </DTS:ConnectionManagers> 
   <DTS:Configurations>
     <DTS:Configuration
       DTS:ConfigurationString="SSIS_PDS_CONFIG_FILE"
