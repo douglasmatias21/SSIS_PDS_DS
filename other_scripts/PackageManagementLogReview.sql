@@ -7,7 +7,7 @@ Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
 1.0      11/03/2019  JJAUSSI          1. Created this script for LDS BC IT243
 
-
+ 
 NOTES:  
 See Chapter 2 of this book for more details...
 
