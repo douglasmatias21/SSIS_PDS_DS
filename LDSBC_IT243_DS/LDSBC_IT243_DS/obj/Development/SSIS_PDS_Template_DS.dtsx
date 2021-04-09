@@ -8,7 +8,7 @@
   DTS:DTSID="{A0EC5431-AE64-4C39-B59E-C65AFAC927E0}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.71"
+  DTS:LastModifiedProductVersion="15.0.2000.71" 
   DTS:LocaleID="1033"
   DTS:ObjectName="SSIS_PDS_Template_DS"
   DTS:PackageType="5"
