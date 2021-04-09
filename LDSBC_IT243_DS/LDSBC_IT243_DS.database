@@ -9,5 +9,5 @@
   <DataSourceImpersonationInfo>
     <ImpersonationMode>Default</ImpersonationMode>
     <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
-  </DataSourceImpersonationInfo>
+  </DataSourceImpersonationInfo> 
 </Database>
