@@ -34,7 +34,7 @@
       DTS:ConfigurationType="5"
       DTS:CreationName=""
       DTS:DTSID="{A2B447E2-D47C-4A5D-8478-6CED7FE19A23}"
-      DTS:ObjectName="XML Configuration" />
+      DTS:ObjectName="XML Configuration" /> 
     <DTS:Configuration
       DTS:ConfigurationString="&quot;SSIS_PDS&quot;;&quot;[dbo].[SSIS Configurations]&quot;;&quot;CommonConfigurations&quot;;"
       DTS:ConfigurationType="7"

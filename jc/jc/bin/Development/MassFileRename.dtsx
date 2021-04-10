@@ -5,7 +5,7 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="UT-BW010148-LFP"
   DTS:CreatorName="ZBC\z035330"
-  DTS:DTSID="{7A2909EE-5631-45DE-A111-CCF7AE0098F2}"
+  DTS:DTSID="{7A2909EE-5631-45DE-A111-CCF7AE0098F2}" 
   DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1100.123"

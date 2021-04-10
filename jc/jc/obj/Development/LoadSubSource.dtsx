@@ -9,7 +9,7 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1100.123"
   DTS:LocaleID="1033"
-  DTS:ObjectName="LoadSubSource"
+  DTS:ObjectName="LoadSubSource" 
   DTS:PackageType="5"
   DTS:VersionBuild="8"
   DTS:VersionGUID="{08DDDD39-B988-4C8A-BFCE-6CC2CC31B329}">
@@ -171,7 +171,7 @@
                       lineageId="Package\hidden_brain_2019_01_21\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
-                  </outputColumns>
+                  </outputColumns> 
                   <externalMetadataColumns />
                 </output>
               </outputs>

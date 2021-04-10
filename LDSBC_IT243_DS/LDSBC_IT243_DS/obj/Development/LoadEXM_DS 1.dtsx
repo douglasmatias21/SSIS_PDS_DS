@@ -71,7 +71,7 @@
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
+              DTS:ColumnDelimiter="_x003B_" 
               DTS:MaximumWidth="100"
               DTS:DataType="129"
               DTS:TextQualified="True"

@@ -6,7 +6,7 @@ EXEC msdb.dbo.sp_delete_job @job_id=N'a1ace135-f5c0-4e7c-a5b9-09f69fc4bfde', @de
 GO
 
 /****** Object:  Job [LoadEXM_xx.dtsx Package]    Script Date: 11/21/2019 8:31:16 PM ******/
-BEGIN TRANSACTION
+BEGIN TRANSACTION 
 DECLARE @ReturnCode INT
 SELECT @ReturnCode = 0
 /****** Object:  JobCategory [[Uncategorized (Local)]]    Script Date: 11/21/2019 8:31:16 PM ******/
